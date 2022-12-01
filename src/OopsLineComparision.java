@@ -1,4 +1,4 @@
-
+import java.util.*;
 public class OopsLineComparision {
     int x1;
     int y1;
@@ -19,33 +19,21 @@ public class OopsLineComparision {
         System.out.println("length of line one is:"+line1_length);
         return  line1_length;
     }
-    public void  equals_or_not(double line1_length,double line2_length)
-    {
-        if(line1_length==line2_length) {
-            System.out.println("both lines are equal");
-        }
-        else{
-            System.out.println("both lines are not equal");
-        }
-    }
-
-    public  void comparision_of_lines(double line1_length,double line2_length)
-    {
-        if(line1_length>line2_length){
-            System.out.println("line1 is greater than line2");
-        }
-        else if(line1_length<line2_length) {
-            System.out.println("line1 is less than line2");
-        }
-        else {
-            System.out.println("line1 and line2 lengths are equal");
+    public  void comparision_of_lines(double line1_length,double line2_length) {
+        int compare=String.valueOf(line1_length).compareTo(String.valueOf(line2_length));
+        if(compare==0){
+            System.out.println("Lines are equal");
+        } else if (compare>0) {
+            System.out.println("Line1 is greater than are Line2");
+        }else{
+            System.out.println("Line1 is lessar than are Line2");
         }
     }
     public static void main(String[] args) {
         OopsLineComparision obj=new OopsLineComparision(4, 6, 6, 8);
         double line1_len=obj.length_of_line1(obj.x1,obj.y1,obj.x2,obj.y2);
 
-        OopsLineComparision obj2=new OopsLineComparision(4, 9, 6, 8);
+        OopsLineComparision obj2=new OopsLineComparision(4, 2, 6, 8);
         double line2_len=obj2.length_of_line1(obj2.x1,obj2.y1,obj2.x2,obj2.y2);
 
         obj.comparision_of_lines(line1_len,line2_len);
