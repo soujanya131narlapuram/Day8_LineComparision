@@ -28,6 +28,19 @@ public class OopsLineComparision {
             System.out.println("both lines are not equal");
         }
     }
+
+    public  void comparision_of_lines(double line1_length,double line2_length)
+    {
+        if(line1_length>line2_length){
+            System.out.println("line1 is greater than line2");
+        }
+        else if(line1_length<line2_length) {
+            System.out.println("line1 is less than line2");
+        }
+        else {
+            System.out.println("line1 and line2 lengths are equal");
+        }
+    }
     public static void main(String[] args) {
         OopsLineComparision obj=new OopsLineComparision(4, 6, 6, 8);
         double line1_len=obj.length_of_line1(obj.x1,obj.y1,obj.x2,obj.y2);
@@ -35,6 +48,6 @@ public class OopsLineComparision {
         OopsLineComparision obj2=new OopsLineComparision(4, 9, 6, 8);
         double line2_len=obj2.length_of_line1(obj2.x1,obj2.y1,obj2.x2,obj2.y2);
 
-        obj.equals_or_not(line1_len,line2_len);
+        obj.comparision_of_lines(line1_len,line2_len);
     }
 }
