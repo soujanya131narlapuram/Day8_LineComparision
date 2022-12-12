@@ -11,13 +11,13 @@ public class OopsLineComparision {
         this.x2=x2;
         this.y2=y2;
     }
-    public  double length_of_line1(int x1,int y1,int x2, int y2)
+    public  double length_of_line(int x1,int y1,int x2, int y2)
     {
         double l1 = Math.pow((x2 - x1), 2);
         double l2 = Math.pow((y2 - y1), 2);
-        double line1_length = Math.sqrt(l1 + l2);
-        System.out.println("length of line one is:"+line1_length);
-        return  line1_length;
+        double line_length = Math.sqrt(l1 + l2);
+        System.out.println("length of line  is:"+line_length);
+        return  line_length;
     }
     public  void comparision_of_lines(double line1_length,double line2_length) {
         int compare=String.valueOf(line1_length).compareTo(String.valueOf(line2_length));
